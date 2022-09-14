@@ -14,30 +14,19 @@ const PanelTabs: FC = () => {
   const scrollContainer = useRef<HTMLDivElement>();
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        zIndex: 9,
-        width: '100%',
-        height: '38px',
-        backgroundColor: '{{{tabsBarBackgroundColor}}}',
-        // borderTop: '1px solid rgb(216, 220, 229)',
-        borderBottom: '1px solid rgb(216, 220, 229)',
-        boxShadow: '0 1px 3px 0 rgb(0 0 0 / 12%), 0 0 3px 0 rgb(0 0 0 / 4%)',
-      }}
-    >
+    <div className={'panel-tabs-bar-parent'}>
       <style>{`
-.panel-tabs-bar {
-  width: calc(100% - ${routeContext.siderWidth}px);
-  position: fixed;
-  height: 38px;
-  display: flex;
-  overflow-x: scroll;
-  padding: 0 50px 5px 5px;
-}
-.panel-tabs-bar::-webkit-scrollbar {
-  display: none;
-}
+      .panel-tabs-bar {
+        width: calc(100% - ${routeContext.siderWidth}px);
+        position: fixed;
+        height: 38px;
+        display: flex;
+        overflow-x: scroll;
+        padding: 0 50px 5px 5px;
+      }
+      .panel-tabs-bar::-webkit-scrollbar {
+        display: none;
+      }
   `}</style>
       <div className="panel-tabs-bar" ref={scrollContainer}>
         {cachingNodes.map((node, idx) => (
