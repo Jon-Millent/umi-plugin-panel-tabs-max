@@ -30,9 +30,13 @@ const PanelTabs: FC = () => {
       <div className="panel-tabs-bar" ref={scrollContainer}>
 
         <Tabs>
-          {cachingNodes.map((node, idx) => (
-            <PanelTab key={idx} node={node} />
-          ))}
+          <Tabs.TabPane key={'1'}>item1</Tabs.TabPane>
+          <Tabs.TabPane key={'2'}>item2</Tabs.TabPane>
+          <Tabs.TabPane key={'3'}>item3</Tabs.TabPane>
+          <Tabs.TabPane key={'4'}>item4</Tabs.TabPane>
+          {/*{cachingNodes.map((node, idx) => (*/}
+          {/*  <PanelTab key={idx} node={node} />*/}
+          {/*))}*/}
         </Tabs>
 
       </div>
